@@ -8,11 +8,11 @@ description "Base role for all nodes"
 # precedence may be confusing in some setups.
 override_attributes(
   # If you're using the sudo cookbook, it can use these attributes for
-  # USERNAME
+  # rberger
   "authorization" => {
     "sudo" => {
       "groups" => ["admin", "wheel"],
-      "users" => ["USERNAME"],
+      "users" => ["rberger"],
       "passwordless" => true
     }
   },
@@ -33,13 +33,13 @@ override_attributes(
     # and the keys of the gems hash.
     "user_installs" => [
       {
-        "user" => "USERNAME",
+        "user" => "rberger",
         "rubies" => ["1.9.3-p194"],
         "global" => "1.9.3-p194",
         "gems" => {
           "1.9.3-p194" => [
             # RubyGems
-            {"name" => "bundler", "version" => "1.1.1"},
+            {"name" => "bundler", "version" => "1.2.0"},
             {"name" => "gem-man"},
             {"name" => "gemcutter"},
             {"name" => "jeweler"},

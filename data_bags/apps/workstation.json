@@ -2,6 +2,7 @@
   "id": "workstation",
   "dmgs": {
     // Applications installed using the dmg_package LWRP.
+    /*
     "Dropbox": {
       "volumes_dir": "Dropbox Installer",
       "url": "http://cdn.dropbox.com/Dropbox%201.1.35.dmg",
@@ -22,6 +23,7 @@
       "url": "http://emacsforosx.com/emacs-builds/Emacs-24.1-universal-10.6.8.dmg",
       "checksum": "59ca3ee94a155b36c5ef60dfad6aa12d54867ab3d3edd31f1ee5e768b2ba45f7"
     }
+   */
   },
   "plists": [
     // Array of plist file names that get dropped off in
@@ -53,8 +55,7 @@
   "dirs": [
     // Array of directories that are created in $HOME. Create parent
     // directories of repositories or files for the user here, e.g.:
-    "bin"
-    "Development",
-    "Development/opscode"
+    "work",
+    "work/runa"
   ]
 }

@@ -13,7 +13,7 @@
     "sbuild"
   ],
   "comment": "Robert J. Berger",
-  "ssh_keys": "SSH public key(s)",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvbnZPXxKg9FLdrONsIt+0dB6vm4ykOJCZ52/knGQc6tEpb0BVDkanyVestBARsSp7OGPNkzCwfSNOTwkgw/u8a8Wsq/2OwHiJGBD74gH1f04uYqc+UReIJElsXHoIHC0+UzB+tMKJNYOfbYWGL3rwgDy2gn+n6VYXA1DFQk63kZge6ylCNCbJPrpW6iop0s+YKDXChwTMwCe7wQWzFTQ/PwzTW8+5xxHOpPn+lelSyfq5v6oG4sHZk1A3LaoGosxRG8pc686XefPS1gjGoYjF7v0oGLwJzKSubGX9vyBTCDttAn68WEA1yqZKqAL+oF9lUvdgDF8lDhiLsXrfAL+FQ== rberger@runa.com",
   "id": "rberger",
   "uid": 1000,
   "shell": "/bin/bash",

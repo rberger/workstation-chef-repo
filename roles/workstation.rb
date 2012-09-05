@@ -2,7 +2,7 @@ name "workstation"
 description "Mac OS X worksations"
 
 run_list(
-  "recipe[build-essential]",
+#  "recipe[build-essential]",
   "recipe[git]",
   "recipe[ruby_build]",
   "recipe[rbenv::user]",
@@ -11,25 +11,25 @@ run_list(
   "recipe[mac_os_x::settings]",
   "recipe[mac_os_x::firewall]",
   # Additional applications that have their own cookbooks.
-  "recipe[iterm2]",
+#  "recipe[iterm2]",
   "recipe[virtualbox]",
   "recipe[ghmac]",
-  "recipe[1password]",
+#  "recipe[1password]",
   "recipe[xquartz]"
 )
 
 default_attributes(
-  "iterm2" => {
-    "version" => "1_0_0_20120203",
-    "checksum" => "30febc426de2db2ea14f46723f5365ae3ad6ab23c877a1b016cd42e29199fe02",
-    "tmux_enabled" => true,
-    "tmux_compile" => false,
-    "tmux_version" => "20120203",
-    "tmux_compiled_checksum" => "679719f2b6b35b95875d656f44d9d6f9ca15515f24eea051f0b96e20e2d89509"
-  },
+#   "iterm2" => {
+#     "version" => "1_0_0_20120203",
+#     "checksum" => "30febc426de2db2ea14f46723f5365ae3ad6ab23c877a1b016cd42e29199fe02",
+#     "tmux_enabled" => true,
+#     "tmux_compile" => false,
+#     "tmux_version" => "20120203",
+#     "tmux_compiled_checksum" => "679719f2b6b35b95875d656f44d9d6f9ca15515f24eea051f0b96e20e2d89509"
+#   },
   "virtualbox" => {
-    "urlbase" => "http://download.virtualbox.org/virtualbox/4.1.18",
-    "url" => "http://download.virtualbox.org/virtualbox/4.1.18/VirtualBox-4.1.18-78361-OSX.dmg"
+    "urlbase" => "http://download.virtualbox.org/virtualbox/4.1.20",
+    "url" => "http://download.virtualbox.org/virtualbox/4.1.20/VirtualBox-4.1.20-80170-OSX.dmg"
   },
   # These attributes are used by the mac_os_x::settings recipe to
   # build dynamic data driven settings. See the mac_os_x cookbook's
@@ -66,7 +66,7 @@ default_attributes(
       },
       "finder" => {
         "domain" => "com.apple.finder",
-        "EmptyTrashSecurely" => true,
+        "EmptyTrashSecurely" => false,
         "FXArrangeGroupViewBy" => "Name",
         "FXPreferredViewStyle" => "Nlsv", # list view
         "NewWindowTarget" => "PfHm", # home directory
@@ -78,26 +78,26 @@ default_attributes(
         "AppleShowScrollBars" => "Always",
         "InitialKeyRepeat" => 15,
         "KeyRepeat" => 2,
-        "NSAutomaticSpellingCorrectionEnabled" => false,
-        "NSUserReplacementItemsEnabled" => false,
-        "WebAutomaticSpellingCorrectionEnabled" => false,
-        "WebAutomaticTextReplacementEnabled" => 0,
+        "NSAutomaticSpellingCorrectionEnabled" => true,
+        "NSUserReplacementItemsEnabled" => true,
+        "WebAutomaticSpellingCorrectionEnabled" => true,
+        "WebAutomaticTextReplacementEnabled" => 1,
         "com.apple.springing.delay" => "0.5",
         "com.apple.springing.enabled" => 1,
         "com.apple.trackpad.scaling" => 3
       },
       "safari" => {
         "domain" => "com.apple.Safari",
-        "AutoFillFromAddressBook" => false,
-        "AutoFillMiscellaneousForms" => false,
-        "AutoFillPasswords" => false,
+        "AutoFillFromAddressBook" => true,
+        "AutoFillMiscellaneousForms" => true,
+        "AutoFillPasswords" => true,
         "AutoOpenSafeDownloads" => false,
         "HistoryAgeInDaysLimit" => 365000,
         "IncludeDevelopMenu" => true,
         "NewTabBehavior" => 1,
         "NewWindowBehavior" => 1,
-        "SafariGeolocationPermissionPolicy" => false,
-        "SendDoNotTrackHTTPHeader" => true,
+        "SafariGeolocationPermissionPolicy" => true,
+        "SendDoNotTrackHTTPHeader" => false,
         "WebKitDefaultFixedFontSize" => 12
       },
       "screensaver" => {
@@ -107,7 +107,7 @@ default_attributes(
       },
       "networkbrowser" => {
         "domain" => "com.apple.NetworkBrowser",
-        "DisableAirDrop" => true
+        "DisableAirDrop" => false
       }
     }
   }
