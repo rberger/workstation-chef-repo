@@ -1,2 +1,9 @@
 .rake_test_cache
+*~
+metadata.json
+.chef/*.pem
+.DS_Store
+Gemfile.lock
+lib/doc
+.yardoc
 
